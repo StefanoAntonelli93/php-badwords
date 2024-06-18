@@ -5,8 +5,8 @@ $text = $_GET['song_text'];
 // lunghezza text
 $lunghezza = strlen($text);
 // text censured
-// rimpiazzo parola scritta nel input text con ***
-$text_censured = str_replace($bad_word, "***", $text);
+// rimpiazzo parola scritta nel input text con *** (anche in caso di maiuscole)
+$text_censured = str_ireplace($bad_word, "***", $text);
 // lunghezza text censured
 $lunghezza_censured = strlen($text_censured);
 
